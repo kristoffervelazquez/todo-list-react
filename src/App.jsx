@@ -1,15 +1,18 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import AddTodo from "./components/AddTodo"
 import TodoList from "./components/TodoList";
 import { taskReducer } from "./reducer/taskReduer";
 
 
-const initialState = []
+const initialState = JSON.parse(localStorage.getItem("todos")) || [];
 
 const App = () => {
 
     const [tasks, dispatch] = useReducer(taskReducer, initialState);
 
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(tasks));
+    }, [tasks])
 
     return (
         <div className="container">
