@@ -17,7 +17,8 @@ const AddTodo = ({ dispatch }) => {
             payload: {
                 todo: task,
                 id: Date.now(),
-                done: false
+                done: false,
+                removing: false
             }
         }
 

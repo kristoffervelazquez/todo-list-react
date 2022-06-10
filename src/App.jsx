@@ -17,10 +17,10 @@ const App = () => {
     return (
         <div className="container">
 
-            <h1 className="text-center">Todo list!</h1>
+            <h1 className="text-center animate__animated animate__fadeInDown animate__delay-1s">Todo list!</h1>
             <div className="mt-3 row d-flex">
 
-                <div className="col-md-5 text-center">
+                <div className="animate__animated animate__bounceInLeft col-md-5 text-center">
                     <AddTodo dispatch={dispatch} />
                 </div>
 
