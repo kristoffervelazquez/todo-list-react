@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 
-
 const AddTodo = ({ dispatch }) => {
 
     const [task, setTask] = useState('');
@@ -17,14 +16,14 @@ const AddTodo = ({ dispatch }) => {
             type: 'add',
             payload: {
                 todo: task,
-                id: Date.now()
+                id: Date.now(),
+                done: false
             }
         }
 
-        dispatch(action);
 
+        dispatch(action);       
         setTask('');
-
     }
 
 

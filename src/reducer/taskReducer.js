@@ -10,6 +10,10 @@ export const taskReducer = (state = [], action) => {
             return (
                 state.filter(task => action.payload.id !== task.id)
             )
+        case 'done':
+            const setDoneTask = state.find(task => task.id === action.payload.id)
+            setDoneTask.done = !setDoneTask.done
+            return [...state];
 
         default:
             return state;

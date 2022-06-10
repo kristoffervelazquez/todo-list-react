@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
 import AddTodo from "./components/AddTodo"
 import TodoList from "./components/TodoList";
-import { taskReducer } from "./reducer/taskReduer";
+import { taskReducer } from "./reducer/taskReducer";
 
 
 const initialState = JSON.parse(localStorage.getItem("todos")) || [];
@@ -20,7 +20,7 @@ const App = () => {
             <h1 className="text-center">Todo list!</h1>
             <div className="mt-3 row d-flex">
 
-                <div className="col-md-5  text-center">
+                <div className="col-md-5 text-center">
                     <AddTodo dispatch={dispatch} />
                 </div>
 
